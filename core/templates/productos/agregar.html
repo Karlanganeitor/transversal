@@ -1,0 +1,26 @@
+{% extends 'app/base.html' %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+
+
+ <!--  AGREGAR EL PRODUCTO -->
+<main>
+    <div class="container">
+      <section class="text-center mb-4">
+        <!--  FORMULARIO PARA AGREGAR -->
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form | crispy}}
+
+ <!--  BOTON PARA AGREGAR -->
+            <button class="btn btn-outline-success" type="submit">Ingresar Producto</button>
+        </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+   
+
+  </main>
+{% endblock %}
